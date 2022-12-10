@@ -14,8 +14,9 @@ def main():
 
   # This line uses the requests module to make a request to an external API
   response = requests.get("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/melbourne?unitGroup=metric&contentType=json", headers={
-    "Authorization": f"Bearer {apiKey}"
-  })
+  "Authorization": f"Bearer {apiKey}"
+})
+
 
   # This line prints the response from the API to the console
   print(response.text)

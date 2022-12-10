@@ -1,3 +1,4 @@
 #add apikey in future
 
-apiKey= "KJLEVNHFQSZZSEP5TCXMZV6ER"
+with open("apikey.txt", "r") as file:
+    apiKey = file.readline()
