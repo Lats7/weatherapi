@@ -9,13 +9,11 @@ def main():
   # This line uses the print function to output a message to the console
   print("The 'requests' module has been imported successfully!")
 
-  # This line imports the "api_key" module from the "dependencies" folder
-  from dependencies.apiKey import apiKey
+ # Import the "apiKey" module from the "dependencies" folder
+  from dependencies.api_Key import api_Key
 
   # This line uses the requests module to make a request to an external API
-  response = requests.get("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/melbourne?unitGroup=metric&contentType=json", headers={
-  "Authorization": f"Bearer {apiKey}"
-})
+  response = requests.get(f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/melbourne?unitGroup=metric&key={api_Key}&contentType=json")
 
 
   # This line prints the response from the API to the console
